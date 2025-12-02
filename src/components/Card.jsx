@@ -7,10 +7,10 @@ export default function Card({ header, children }) {
         <motion.div 
             whileHover="hover"
             initial="initial"
-            className="w-full h-fit px-5 py-8 flex flex-col gap-5 items-center text-black 
+            className="w-full h-fit px-3 md:px-5 py-4 md:py-8 flex flex-col gap-5 items-center text-black 
                 hover:bg-black hover:text-white cursor-pointer">
             <div className="w-full h-fit flex justify-between items-center">
-                <p className="text-2xl font-semibold">{header}</p>
+                <p className="text-lg md:text-2xl font-semibold">{header}</p>
                 <motion.span
                 variants={{
                     initial: { rotate: 90 },
@@ -18,7 +18,7 @@ export default function Card({ header, children }) {
                 }}
                 transition={{ duration: 0.3 }}
                 >
-                <FontAwesomeIcon icon={faArrowUpLong} className="text-base" />
+                <FontAwesomeIcon icon={faArrowUpLong} className="text-sm md:text-base" />
             </motion.span>
             </div>
             <AnimatePresence>
@@ -30,7 +30,7 @@ export default function Card({ header, children }) {
                 transition={{ duration: 0.4, ease: "easeOut" }}
                 className="overflow-hidden text-justify"
                 >
-                    <p className="text-base font-medium leading-[120%]">
+                    <p className="text-sm md:text-base font-medium leading-[120%]">
                         {children}
                     </p>
                 </motion.div>
